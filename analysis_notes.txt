@@ -1,0 +1,23 @@
+## TASK 3: LOSS vs EPOCH ANALYSIS 
+
+Q1. Why does the loss curve decrease?
+
+The loss curve decreases because gradient descent continuously updates the model parameters w and b to minimize the prediction error. With each epoch, the predicted salary values become closer to the actual salaries, which reduces the difference between them. As a result, the mean squared error gradually decreases until the model reaches the best possible fit for the data.
+
+Q2. What would happen if the learning rate = 0.5?
+
+If the learning rate is set to 0.5, the updates to w and b become too large. Instead of moving smoothly toward the minimum loss, the model may overshoot it. This can cause the loss to increase or oscillate, making the training unstable and preventing the model from converging properly.
+
+Q3. What does a flat loss curve indicate?
+
+A flat loss curve indicates that the model has converged and is no longer learning significantly. This happens when the gradients become very small and further updates to the parameters do not reduce the loss. It can also indicate that the learning rate is too small, resulting in very slow learning.
+
+## TASK 4: LEARNING RATE EXPERIMENT
+
+Q1. Which learning rate worked best and why?
+
+The learning rate 0.01 worked best because it reduced the loss smoothly and stayed stable throughout training. Unlike the higher learning rate, it did not cause the loss to explode, and unlike the very small learning rate, it did not learn too slowly. This learning rate allowed the model to converge efficiently within 1000 epochs, making it the most balanced and reliable choice.
+
+Q2. Which learning rate failed and how you identified failure?
+
+The learning rate 0.1 failed. This was clearly identified by the loss value exploding to extremely large numbers (very high scale on the graph) instead of decreasing. The curve shoots upward almost vertically, which indicates that the model overshot the minimum due to excessively large parameter updates. This unstable behavior shows that the learning rate was too high for this dataset.
